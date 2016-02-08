@@ -12,11 +12,17 @@ namespace PanoramaApp1
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        //Link to class
+        private BookShelf bookshelf;
         // Constructor
         public MainPage()
         {
+            //calling constructor
+            bookshelf = new BookShelf();
             InitializeComponent();
 
+            //link for data to GUI
+            listBox1.DataContext = bookshelf;
             // Set the data context of the listbox control to the sample data
             DataContext = App.ViewModel;
         }

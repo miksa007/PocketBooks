@@ -17,25 +17,6 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
 
-        <!-- LOCALIZATION NOTE:
-            To localize the displayed strings copy their values to appropriately named
-            keys in the app's neutral language resource file (AppResources.resx) then
-            replace the hard-coded text value between the attributes' quotation marks
-            with the binding clause whose path points to that string name.
-
-            For example:
-
-                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
-
-            This binding points to the template's string resource named "ApplicationTitle".
-
-            Adding supported languages in the Project Properties tab will create a
-            new resx file per language that can carry the translated values of your
-            UI strings. The binding in these examples will cause the value of the
-            attributes to be drawn from the .resx file that matches the
-            CurrentUICulture of the app at run time.
-         -->
-
          <!--Panorama control-->
         <phone:Panorama Title="my application">
             <phone:Panorama.Background>
@@ -45,15 +26,21 @@
             <!--Panorama item one-->
             <phone:PanoramaItem Header="first item">
                 <!--Single line list with text wrapping-->
-                <phone:LongListSelector Margin="0,0,-22,0" ItemsSource="{Binding Items}">
-                    <phone:LongListSelector.ItemTemplate>
+                <ListBox  Height="358" HorizontalAlignment="Left" 
+                     Margin="6,6,0,0" x:Name="listBox1" ItemsSource="{Binding}" 
+                     VerticalAlignment="Top" 
+                     Width="460" FontSize="26.667">
+                    <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Margin="0,-6,0,12">
-                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeExtraLarge}"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding BookNumber}" 
+                                       Margin="2" FontSize="30" />
+                                <TextBlock Text="{Binding BookName}" 
+                                       Margin="2" FontSize="30" />
                             </StackPanel>
                         </DataTemplate>
-                    </phone:LongListSelector.ItemTemplate>
-                </phone:LongListSelector>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </phone:PanoramaItem>
 
             <!--Panorama item two-->
