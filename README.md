@@ -7,5 +7,7 @@ Windows phone 8.1 project for testing purpose
 
 # Tasks
 * GUI-Cleanup - lot of useless code
-* Book -class: String name, int number; Book(String name, int number),.. 
+* OK - Book -class: String name, int number; Book(String name, int number),.. 
 * BookShelf -class: ObservableCollection<Book>; add(Book book), remove(int number),...
+* Book: ordering by number in listview
+* MainPage: insert page in panoramaview
