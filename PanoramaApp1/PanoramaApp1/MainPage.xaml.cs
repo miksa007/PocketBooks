@@ -35,5 +35,10 @@ namespace PanoramaApp1
                 App.ViewModel.LoadData();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

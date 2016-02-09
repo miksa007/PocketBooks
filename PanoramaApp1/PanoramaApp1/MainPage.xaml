@@ -26,21 +26,26 @@
             <!--Panorama item one-->
             <phone:PanoramaItem Header="first item">
                 <!--Single line list with text wrapping-->
-                <ListBox  Height="358" HorizontalAlignment="Left" 
-                     Margin="6,6,0,0" x:Name="listBox1" ItemsSource="{Binding}" 
-                     VerticalAlignment="Top" 
-                     Width="460" FontSize="26.667">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding BookNumber}" 
-                                       Margin="2" FontSize="30" />
-                                <TextBlock Text="{Binding BookName}" 
-                                       Margin="2" FontSize="30" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                <Grid Margin="12,0,0,38">
+                    <ListBox  Height="358" HorizontalAlignment="Left" 
+                         Margin="6,6,0,0" x:Name="listBox1" ItemsSource="{Binding}" 
+                        VerticalAlignment="Top" 
+                        Width="460" FontSize="26.667"> 
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding BookNumber}" 
+                                           Margin="2" FontSize="30" />
+                                    <TextBlock Text="{Binding BookName}" 
+                                           Margin="2" FontSize="30" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Button Content="Number order" HorizontalAlignment="Left" Margin="5,370,0,0" 
+                            VerticalAlignment="Top" Click="Button_Click"/>
+
+                </Grid>
             </phone:PanoramaItem>
 
             <!--Panorama item two-->
