@@ -10,5 +10,9 @@ Windows phone 8.1 project for testing purpose
 * OK - Book -class: String name, int number; Book(String name, int number),.. 
 * OK - BookShelf -class: ObservableCollection<Book>; add(Book book), 
 * bookShelf: remove(int number),...
-* Book: ordering by number in listview
+* Book: sortByNumbers() method for sorting by number in listview
+* Book: sortByNames() method for sorting by names of books in listview
+* MainPage: button for name sorting
+* MainPage.cs: button action for name sorting
+* MainPage: button for number sorting
 * MainPage: insert page in panoramaview
