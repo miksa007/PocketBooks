@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PanoramaApp1
 {
-    class Book
+    public class Book
     {
         private string Number;
 

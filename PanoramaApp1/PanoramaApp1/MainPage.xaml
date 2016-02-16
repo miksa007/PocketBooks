@@ -50,34 +50,27 @@
 
             <!--Panorama item two-->
             <phone:PanoramaItem>
-                <!--Double line list with image placeholder and text wrapping using a floating header that scrolls with the content-->
-                <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}">
-                    <phone:LongListSelector.ListHeaderTemplate>
-                        <DataTemplate>
-                            <Grid Margin="12,0,0,38">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <TextBlock Text="second item"
-                                           Style="{StaticResource PanoramaItemHeaderTextStyle}"
-                                           Grid.Row="0"/>
-                            </Grid>
-                        </DataTemplate>
-                    </phone:LongListSelector.ListHeaderTemplate>
-                    <phone:LongListSelector.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
-                                <!--Replace rectangle with image-->
-                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#FFFFC700" Background="#FFFFC700"/>
-                                <StackPanel Width="311" Margin="8,-7,0,0">
-                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
-                                </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </phone:LongListSelector.ItemTemplate>
-                </phone:LongListSelector>
+                <Grid Margin="12,0,0,38">
+                    <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" 
+                               TextWrapping="Wrap" Text="Number" 
+                               VerticalAlignment="Top"/>
+                    <TextBox x:Name="numberField" HorizontalAlignment="Left" Height="72" 
+                             Margin="10,42,-10,0" TextWrapping="Wrap" 
+                             Text="" VerticalAlignment="Top" 
+                             Width="408"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,119,0,0" 
+                               TextWrapping="Wrap" Text="Name"
+                               VerticalAlignment="Top"/>
+                    <TextBox x:Name="nameField" HorizontalAlignment="Left" Height="72" 
+                             Margin="10,146,-10,0" TextWrapping="Wrap" 
+                             Text="" VerticalAlignment="Top" 
+                             Width="408"/>
+
+                    <Button Content="Add new book" HorizontalAlignment="Left" 
+                            Margin="10,369,0,0" VerticalAlignment="Top" 
+                            Click="Button_Click"/>
+
+                </Grid>
             </phone:PanoramaItem>
 
             <!--Panorama item three-->
