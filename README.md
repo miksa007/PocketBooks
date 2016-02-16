@@ -1,6 +1,11 @@
 # PocketBooks
 Windows phone 8.1 project for testing purpose
 
+#Branches
+* Master
+* tieto1 - datasaving with textfile
+* tieto2 - Datasaving with serializehelper -class
+
 # Sources
 * How to create this repository with Visual Studio: https://msdn.microsoft.com/Library/vs/alm/Code/git/get-started
 * 
