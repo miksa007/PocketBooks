@@ -35,10 +35,18 @@ namespace PanoramaApp1
                 App.ViewModel.LoadData();
             }
         }
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            bookshelf.saveBooks(bookshelf);
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string number = numberField.Text;
+            string name = nameField.Text;
 
+            bookshelf.addBook(number, name);
         }
     }
 }
