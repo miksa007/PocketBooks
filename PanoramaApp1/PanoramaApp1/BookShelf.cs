@@ -7,7 +7,8 @@ using System.Collections.ObjectModel;
 
 namespace PanoramaApp1
 {
-    class BookShelf : ObservableCollection<Book>
+    //public so SerializeHelper works
+    public class BookShelf : ObservableCollection<Book>
     {
         // constructor
         public BookShelf()

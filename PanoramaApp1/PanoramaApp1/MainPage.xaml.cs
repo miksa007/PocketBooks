@@ -35,7 +35,14 @@ namespace PanoramaApp1
                 App.ViewModel.LoadData();
             }
         }
-
+        public void tallenna()
+        {
+            SerializeHelper.SaveData<BookShelf>("kaikkidata", bookshelf);
+        }
+        public void lataa()
+        {
+            bookshelf = (BookShelf)SerializeHelper.ReadData<BookShelf>("kaikkidata");
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
